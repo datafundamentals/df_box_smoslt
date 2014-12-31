@@ -46,11 +46,6 @@ docker_container "jenkins" do
 	user "root"
 	port "8080:8080"
 	action :run
-	command "apt-get install -y maven"
-end
-
-docker_container "jenkins" do
-	action :commit
 end
 
 docker_container "tutum/tomcat" do 
