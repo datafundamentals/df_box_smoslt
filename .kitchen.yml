@@ -1,0 +1,17 @@
+---
+driver:
+  network:
+  - ["private_network", {ip: "192.168.33.42"}]
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+    - recipe[df_box_smoslt::default]
+    attributes:
