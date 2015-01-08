@@ -1,31 +1,25 @@
 # df_box_smoslt-cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook was designed to create a group environment for SMOSLT application runnig on docker that includes:
+1. Jenkins for testing
+2. Nexus for artifact storage
+3. Tomcat for displaying the webapp
+
+Much of the cookbook and its data container backup scripts were the result of an excellent tutorial here 
+```
+http://enthused.btr3.com/2014/09/howto-dealing-with-data-in-docker.html
+```
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu 14.04, or any platformat that has a working LXC kernel for running docker
 
 ## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['df_box_smoslt']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
 
 ## Usage
 
 ### df_box_smoslt::default
+installs Docker, creates the base containers 
 
 Include `df_box_smoslt` in your node's `run_list`:
 
@@ -39,4 +33,4 @@ Include `df_box_smoslt` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Jeff Carapetyan (<jeff@datafundamentals.com>)
