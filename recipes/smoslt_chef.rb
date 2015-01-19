@@ -53,3 +53,10 @@ docker_container "conceptnotfound/sonatype-nexus" do
 	volume "/var/nexus/:/nexus" 
 	action :run 
 end
+
+docker_container "tutum/tomcat" do 
+	container_name "tomcat" 
+	detach true
+	port "8082:8080"
+	action :run 
+end
