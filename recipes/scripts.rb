@@ -1,3 +1,5 @@
+
+
 directory "/scripts" do 
 	mode "0777" 
 	action :create

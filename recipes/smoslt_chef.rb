@@ -17,25 +17,21 @@ docker_container "jenkins" do
 	action :run
 end
 
-docker_container "jenkins" do 
-	source "/var/jenkins_home"
-	destination "/var/jenkins"
-	action :cp
-end
-
-docker_container "conceptnotfound/sonatype-nexus" do 
-	source "/nexus" 
-	destination "/var/nexus" 
-	action :cp 
-end
-
-
 execute "sudo docker cp jenkins:/var/jenkins_home /var/jenkins" do 
 	action :run
 end
 
 execute "sudo docker cp nexus:/nexus /var/nexus" do 
 	action :run 
+end
+
+docker_container "jenkins" do 
+	action :remove
+	force true
+end
+docker_container "conceptnotfound/sonatype-nexus" do 
+	action :remove
+	force true 
 end
 
 docker_container "jenkins" do 
