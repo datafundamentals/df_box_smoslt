@@ -1,1 +1,1 @@
-default['df_box_smoslt']['data_container'] = false
+default['df_box_smoslt']['data_container'] = true
