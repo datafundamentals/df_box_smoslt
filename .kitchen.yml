@@ -8,10 +8,10 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-12.04
+  - name: ubuntu/trusty64
 
 suites:
-  - name: default
+  - name: smoslt_docker
     run_list:
     - recipe[df_box_smoslt::default]
     attributes:
